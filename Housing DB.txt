@@ -1,0 +1,42 @@
+CREATE DATABASE HousingDB;
+
+CREATE TABLE DEVELOPMENT (
+    DevelopmentID int NOT NULL,
+    Name varchar(255) NOT NULL,
+    NumberOfUnits int NOT NULL,
+);
+
+CREATE TABLE Unit (
+    UnitNumber int NOT NULL,
+    DevelopmentID int NOT NULL,
+    BedRooms int NOT NULL,
+    BathRooms int NOT NULL,
+    SquareFootage int NOT NULL,
+   PRIMARY KEY (DevelopmentID)
+);
+
+CREATE TABLE UnitHousehold (
+    UnitNumber int NOT NULL,
+    UnitHousehold int NOT NULL,
+    HouseholdID int NOT NULL,
+    MoveInDate Date NOT NULL,
+    MoveOutDate Date NOT NULL,
+    PRIMARY KEY (UnitNumber)
+    
+);
+
+CREATE TABLE Resident(
+    ResidentID int,
+    HouseholdID int,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Birthdate date,
+    Head bool,
+    PRIMARY KEY (ResidentID )
+);
+
+CREATE TABLE Household (
+    HouseholdID int,
+    Description
+    
+);
